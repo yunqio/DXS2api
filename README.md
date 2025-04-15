@@ -1,6 +1,6 @@
-# DXS2API - DeepSeek API Proxy
+# DXS2API - DXS DeepSeek to API
 
-DXS2API 是一个代理服务器，可以将 DeepSeek Web 聊天请求转换为 API 格式。它支持多种模型和网络搜索功能，可通过 Docker 在 Ubuntu VPS 上部署。
+DXS2API 是一个代理服务器，可以将 DXS DeepSeek Web 聊天请求转换为 API 格式。它支持多种模型和网络搜索功能，可通过 Docker 部署。
 
 ## 功能特点
 
@@ -19,7 +19,7 @@ DXS2API 是一个代理服务器，可以将 DeepSeek Web 聊天请求转换为 
 
 - Node.js 18+ (开发环境)
 - Docker 和 Docker Compose (部署环境)
-- DeepSeek API token(s)
+- DXS DeepSeek API token(s)
 
 ## API 接口
 
@@ -48,7 +48,7 @@ DXS2API 是一个代理服务器，可以将 DeepSeek Web 聊天请求转换为 
 
 Authorization 请求头：
 ```
-Authorization: Bearer YOUR_DEEPSEEK_TOKEN
+Authorization: Bearer YOUR_DXSDEEPSEEK_TOKEN
 ```
 
 ### Token 检查接口
@@ -58,7 +58,7 @@ Authorization: Bearer YOUR_DEEPSEEK_TOKEN
 请求体：
 ```json
 {
-  "token": "YOUR_DEEPSEEK_TOKEN"
+  "token": "YOUR_DXSDEEPSEEK_TOKEN"
 }
 ```
 
@@ -75,7 +75,7 @@ Authorization: Bearer YOUR_DEEPSEEK_TOKEN
 
 1. 克隆仓库：
 ```bash
-git clone https://github.com/yourusername/dxs2api.git
+git clone https://github.com/yunqio/dxs2api.git
 cd dxs2api
 ```
 
