@@ -3,9 +3,7 @@ version: '3.8'
 services:
   dxs2api:
     container_name: dxs2api
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: 958527256docker/dxs2api:latest
     restart: always
     ports:
       - "8000:8000"
@@ -13,9 +11,13 @@ services:
       - NODE_ENV=production
       - PORT=8000
       - DEEPSEEK_API_URL=https://chat.zju.edu.cn
-      # Uncomment and set the default authorization token if needed
-      # - DXS_AUTHORIZATION=your_token_here
+      - DXS_AUTHORIZATION=your_deepseek_token  # 替换为您的实际token
       - RATE_LIMIT=60
     volumes:
-      # Mount a custom .env file if needed for configuration
-      - ./.env:/app/.env:ro 
+      - ./logs:/app/logs  # 可选：挂载日志目录
+    networks:
+      - dxs_network
+
+networks:
+  dxs_network:
+    driver: bridge
