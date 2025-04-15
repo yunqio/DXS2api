@@ -1,0 +1,59 @@
+POST /v1/chat/completions HTTP/1.1
+Host: chat.zju.edu.cn
+Connection: keep-alive
+Content-Length: 161
+sec-ch-ua-platform: "Windows"
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMTQ0MTYsInVzZXJuYW1lIjoiY2Fyc2lfcWlpNjNxRzQ2dzMvM0NRbHdjQUdwMlNGUTZ3PSIsImV4cCI6MTc0NDc5NDk3MiwiaWF0IjoxNzQ0NzA4NTcyLCJpc3MiOiJ1c2VyLXNlcnZpY2UifQ.0dwPIJU2XfF4l8xxzkNQhEwcOp4uw38Sdl1q-3dSLkA
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0
+sec-ch-ua: "Not(A:Brand";v="99", "Microsoft Edge";v="133", "Chromium";v="133"
+Content-Type: application/json
+sec-ch-ua-mobile: ?0
+Accept: */*
+Origin: https://chat.zju.edu.cn
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+
+{"model":"ds-v3","messages":[{"role":"user","content":"你好"}],"stream":true,"features":{"image_generation":false,"code_interpreter":false,"web_search":false}}
+返回
+HTTP/1.1 200 OK
+Server: nginx
+Date: Tue, 15 Apr 2025 18:10:25 GMT
+Content-Type: text/event-stream
+Transfer-Encoding: chunked
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Headers: Origin, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization
+Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, OPTIONS
+Access-Control-Allow-Origin: *
+Cache-Control: no-cache
+Cache-Control: no-cache
+X-Accel-Buffering: no
+
+data: {"id":"endpoint_common_44727","object":"chat.completion.chunk","created":1744740626,"model":"deepseek-v3","choices":[{"index":0,"delta":{"role":"assistant","content":"你好"},"finish_reason":null}]}
+
+data: {"id":"endpoint_common_44727","object":"chat.completion.chunk","created":1744740626,"model":"deepseek-v3","choices":[{"index":0,"delta":{"role":"assistant","content":"！"},"finish_reason":null}]}
+
+data: {"id":"endpoint_common_44727","object":"chat.completion.chunk","created":1744740626,"model":"deepseek-v3","choices":[{"index":0,"delta":{"role":"assistant","content":""},"finish_reason":null}]}
+
+data: {"id":"endpoint_common_44727","object":"chat.completion.chunk","created":1744740626,"model":"deepseek-v3","choices":[{"index":0,"delta":{"role":"assistant","content":"😊"},"finish_reason":null}]}
+
+data: {"id":"endpoint_common_44727","object":"chat.completion.chunk","created":1744740626,"model":"deepseek-v3","choices":[{"index":0,"delta":{"role":"assistant","content":" "},"finish_reason":null}]}
+
+data: {"id":"endpoint_common_44727","object":"chat.completion.chunk","created":1744740626,"model":"deepseek-v3","choices":[{"index":0,"delta":{"role":"assistant","content":"有什么"},"finish_reason":null}]}
+
+data: {"id":"endpoint_common_44727","object":"chat.completion.chunk","created":1744740626,"model":"deepseek-v3","choices":[{"index":0,"delta":{"role":"assistant","content":"我可以"},"finish_reason":null}]}
+
+data: {"id":"endpoint_common_44727","object":"chat.completion.chunk","created":1744740627,"model":"deepseek-v3","choices":[{"index":0,"delta":{"role":"assistant","content":"帮"},"finish_reason":null}]}
+
+data: {"id":"endpoint_common_44727","object":"chat.completion.chunk","created":1744740627,"model":"deepseek-v3","choices":[{"index":0,"delta":{"role":"assistant","content":"你的"},"finish_reason":null}]}
+
+data: {"id":"endpoint_common_44727","object":"chat.completion.chunk","created":1744740627,"model":"deepseek-v3","choices":[{"index":0,"delta":{"role":"assistant","content":"吗"},"finish_reason":null}]}
+
+data: {"id":"endpoint_common_44727","object":"chat.completion.chunk","created":1744740627,"model":"deepseek-v3","choices":[{"index":0,"delta":{"role":"assistant","content":"？"},"finish_reason":null}]}
+
+data: {"id":"endpoint_common_44727","object":"chat.completion.chunk","created":1744740627,"model":"deepseek-v3","usage":{"prompt_tokens":4,"completion_tokens":12,"total_tokens":16},"choices":[{"index":0,"delta":{"role":"assistant","content":""},"finish_reason":"stop"}]}
+
+data: [DONE]
+

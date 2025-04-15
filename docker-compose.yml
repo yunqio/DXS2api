@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  dxs2api:
+    container_name: dxs2api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - NODE_ENV=production
+      - PORT=8000
+      - DEEPSEEK_API_URL=https://chat.zju.edu.cn
+      # Uncomment and set the default authorization token if needed
+      # - DXS_AUTHORIZATION=your_token_here
+      - RATE_LIMIT=60
+    volumes:
+      # Mount a custom .env file if needed for configuration
+      - ./.env:/app/.env:ro 
